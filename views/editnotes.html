@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap Edit</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" integrity="sha384-PmY9l28YgO4JwMKbTvgaS7XNZJ30MK9FAZjjzXtlqyZCqBY6X6bXIkM++IkyinN+" crossorigin="anonymous">
+  </head>
+  <body>
+
+        <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                    <a class="navbar-brand" href="#">WebSiteName</a>
+                  </div>
+                  <ul class="nav navbar-nav">
+                        <li class="active"><a href="/">Home</a></li>
+                        <li><a href="/createNotes">Create New Stand Up notes</a></li>
+                  </ul>
+                </div>
+              </nav>
+
+
+
+<div class="container">
+        <form action="newnotes" method="POST">
+
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <div class="form-group">
+                            <label for="sel1">Select Members:</label>
+                            <select name="memberName" class="form-control" id="sel1">
+                                    <option value="none">select</option>
+                                    <option value="membername1">membername1</option>
+                                    <option value="membername2">membername2</option>
+                                    <option value="membername3">membername3</option>
+                                    <option value="membername4">membername4</option>
+                            </select>
+                          </div>
+    
+    
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">stand Up notes</label>
+                    <input type="text" class="form-control" id="inputPassword4" name="standNotes" value="{{editNotesData.standNotes}}" placeholder="Notes">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputAddress">email</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="test@gmail.com" value="{{editNotesData.email}}" name="email">
+                </div>
+                <div class="form-group">
+                  <label for="inputAddress2">project</label>
+                  <input type="text" class="form-control" id="inputAddress2" placeholder="project" name="project" value="{{editNotesData.project}}">
+                </div>
+                   
+              
+
+            
+    
+                <button type="submit" class="btn btn-primary">Submit</button>
+
+        
+              </form>
+    
+</div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js" integrity="sha384-vhJnz1OVIdLktyixHY4Uk3OHEwdQqPppqYR8+5mjsauETgLOcEynD9oPHhhz18Nw" crossorigin="anonymous"></script>
+  </body>
+</html>
